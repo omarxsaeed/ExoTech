@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Page</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./signPage.css" />
+    </head>
+    <body>
+        <!----------------------- NavBar ----------------------->
+        <nav class="home-navbar navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a href="../index.html">
+                    <div class="logo-section col-lg-3">
+                        <img class="logo-section__logo" src="../image/logo.png" alt="" />
+                        <h3 class="logo-section__name">ExoTech</h3>
+                    </div>
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-2"></ul>
+                    <form class="form-inline col-lg-6 my-2 my-lg-0">
+                        <input
+                            class="form-control col-lg-9 mr-sm-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav mr-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Login-Signup/signPage.html">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!----------------------- NavBar ----------------------->
+
+        <!-- ................... Container div .................... -->
+        <div class="container">
+            <!-- Sign In Form -->
+            <form class="signIn_form" id="login">
+                <h1 class="title_logIn">Login</h1>
+
+                <!-- Input element for userName field -->
+                <div class="userName_field">
+                    <input
+                        type="text"
+                        class="input_form signIn_userName"
+                        required
+                        autofocus
+                        placeholder="Username or email"
+                    />
+                </div>
+
+                <!-- Input element for password field -->
+                <div class="password_field userName_field">
+                    <input
+                        type="password"
+                        class="input_form signIn_password"
+                        required
+                        autofocus
+                        placeholder="Password"
+                    />
+                </div>
+
+                <!-- Div for message in case of invaled userName or password -->
+                <div class="signIn_general_error signIn_sucsses_logIn_message"></div>
+
+                <!-- Button for Login -->
+                <button class="btn_signIn" type="submit" onclick="logIn()">Login</button>
+
+                <!-- If you forgot your password? -->
+                <p class="forget_password">
+                    <a href="#" class="anchor_link">Forgot your password?</a>
+                </p>
+
+                <!-- If you don't have an account? and want to create one -->
+                <p class="create_account">
+                    <a class="anchor_link" href="#" id="linkCreateAccount" onclick="goTo_signUp()"
+                        >Don't have an account? Create account</a
+                    >
+                </p>
+            </form>
+
+            <!-- ..................................................................................... -->
+
+            <!-- .......... sign_up form ............. -->
+
+            <form class="signUp_form">
+                <h1 class="title_createAccount">Create Account</h1>
+
+                <!-- <div class="form__message form__message--error">ghjkl</div> -->
+                <div class="inputGroup_form">
+                    <input
+                        type="text"
+                        class="input_form"
+                        id="signUp_userName"
+                        onblur="check_userName()"
+                        required
+                        autofocus
+                        placeholder="Username"
+                    />
+                    <div class="error_message signUp_userName_error">
+                        userName should :<br />
+                        - begin your name with letter<br />
+                        - No special characters allowed except ( _ )<br />
+                        - No space allowed<br />
+                    </div>
+                </div>
+                <div class="inputGroup_form">
+                    <input
+                        type="email"
+                        class="input_form"
+                        id="signUp_email"
+                        required
+                        autofocus
+                        placeholder="Email Address"
+                    />
+                    <!-- <div class="error_message signUp_email_error"></div> -->
+                </div>
+
+                <div class="inputGroup_form">
+                    <input
+                        type="password"
+                        class="input_form signUp_password"
+                        onblur="check_password()"
+                        required
+                        autofocus
+                        placeholder="Password"
+                    />
+                    <div class="error_message signUp_password1_error">
+                        Password must :<br />
+                        - at leaset 6 characters<br />
+                        - at least one number<br />
+                        - at least one special character except ( _ )<br />
+                        - No spaces
+                    </div>
+                </div>
+                <div class="inputGroup_form">
+                    <input
+                        type="password"
+                        class="input_form signUp_password_2"
+                        onblur="check_password_matched()"
+                        required
+                        autofocus
+                        placeholder="Confirm password"
+                    />
+                    <div class="error_message signUp_password2_error signUp_password1_error">
+                        password don't match
+                    </div>
+                </div>
+                <!-- Message for Sucsses registration -->
+                <div id="signUp_sucsses_register_message">Sucsses Registration Go to Sign In</div>
+                <!-- Create Acount Button -->
+                <button class="btn_signUp" type="submit" onclick="saveData_goTo_signIn()">
+                    Create Account
+                </button>
+                <p class="already_have_account">
+                    <a class="anchor_link" href="#" id="linkLogin" onclick="goTo_signIn()"
+                        >Already have an account? Sign in</a
+                    >
+                </p>
+            </form>
+        </div>
+
+        <!-- To link HTML file with JS file -->
+        <script src="/signPage.js"></script>
+    </body>
+</html>
