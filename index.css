@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-black: #222222;
+    --color-gray: #434242;
+    --color-teal: #22a39f;
+    --color-white: #f3efe0;
+}
+
+/*********************************** Navbar ************************************/
+.home-navbar {
+    background-color: var(--color-black);
+    height: 15vh;
+}
+
+.logo-section {
+    color: var(--color-white);
+}
+.logo-section .logo-section__log,
+.logo-section .logo-section__name {
+    display: inline-block;
+}
+.signin-section a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+/*********************************** Navbar ************************************/
+
+/*********************************** Main ************************************/
+.category-section ul {
+    list-style-type: none;
+}
+/*********************************** Main ************************************/
