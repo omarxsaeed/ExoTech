@@ -1,0 +1,4 @@
+@import url(main.css);
+.logo-img {
+    background-color: var(--color-teal);
+}

@@ -1,0 +1,160 @@
+
+/* ................ General ............. */
+
+html {
+    box-sizing: border-box;
+} 
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+/* ................ Body ............. */
+
+body{
+    background-color: rgba(103, 114, 107, 0.127);
+}
+
+.container{
+    background-color: rgba(86, 141, 37, 0.184);
+    width: 50%;
+    margin: 0px auto;
+    padding: 20px 0px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+
+/* ................. sign_in form .................. */
+
+
+
+
+.input_form{
+    width: 70%;
+    height: 35px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+
+.userName_field{
+    width: 90%;
+    margin: 0px auto;
+}
+
+.password_field{
+    margin-bottom: 15px;
+}
+
+
+.userName_field_error{
+position: relative;
+right: 15%;
+color: red;
+font-size: 19px;
+display: none;
+}
+
+.signIn_sucsses_logIn_message{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(64, 49, 49);
+}
+
+.password_field_error{
+margin-bottom: 20px;
+position: relative;
+right: 20%;
+display: none;
+}
+
+.signIn_general_error{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+
+.btn_signIn,.btn_signUp{
+    width: 35%;
+    height: 40px;
+    font-size: 25px;
+    background-color: rgb(112, 190, 112);
+    border-radius: 5px;
+}
+
+.anchor_link{
+    font-size: 18px;
+}
+
+/* ................. sign_up form .................. */
+
+
+.btn_signUp{
+    width: 250px;
+    margin-top: 30px;
+}
+
+
+.signUp_form {
+    display: none;
+}
+
+.error_message{
+    position: relative;
+    top: -10px;
+    color: rgba(247, 2, 2, 0.966);
+    font-size: 19px;
+    background-color: rgba(0, 0, 0, 0.796);
+    width: 70%;
+    padding: 20px;
+    display: none;
+    
+}
+
+.signUp_password2_error{
+    position: relative;
+    right: 18%;
+}
+
+.signUp_email_error{
+    position: relative;
+    right: 24%;
+}
+
+#signUp_sucsses_register_message{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 30px;
+    display: none;
+    color: rgb(33, 80, 48);
+}
+
+.signUp_userName_error{
+    text-align: left;
+    position: relative;
+    left: 15%;
+    border-radius: 10px;
+    
+}
+
+
+.signUp_password1_error{
+    text-align: left;
+    position: relative;
+    left: 15%;
+    border-radius: 10px;
+
+}
+
+.signUp_password2_error{
+    padding: 10px;
+    border-radius: 7px;
+
+}
+
